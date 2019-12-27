@@ -1,0 +1,1612 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow-x: none !important;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.container,
+.container-fluid {
+  padding: 0;
+}
+
+.nav-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 8vh;
+  background: none;
+  padding: 10px 0;
+}
+
+.logo a {
+  color: #f34413c9;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.navigation-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 40%;
+}
+
+.navigation-links li {
+  list-style: none;
+}
+
+.navigation-links a {
+  color: black;
+  text-decoration: none;
+  letter-spacing: 3px;
+  font-size: 14px;
+}
+
+.navigation-active {
+  -webkit-transform: translateX(0%) !important;
+          transform: translateX(0%) !important;
+}
+
+.burger {
+  display: none;
+  cursor: pointer;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: black;
+  margin: 5px;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.toggle .line1 {
+  -webkit-transform: rotate(-45deg) translate(-5px, 6px);
+          transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+  opacity: 0;
+}
+
+.toggle .line3 {
+  -webkit-transform: rotate(45deg) translate(-5px, -6px);
+          transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.navigation-icons .fa-user {
+  color: black;
+  -webkit-transition: all 350ms ease-in-out;
+  transition: all 350ms ease-in-out;
+}
+
+.navigation-icons .fa-heart {
+  color: black;
+  -webkit-transition: all 350ms ease-in-out;
+  transition: all 350ms ease-in-out;
+}
+
+.navigation-icons .fa-shopping-cart {
+  color: black;
+  -webkit-transition: all 350ms ease-in-out;
+  transition: all 350ms ease-in-out;
+}
+
+.navigation-icons:hover .fa-user {
+  color: cyan;
+}
+
+.navigation-icons:hover .fa-heart {
+  color: white;
+}
+
+.navigation-icons:hover .fa-shopping-cart {
+  color: lightgreen;
+}
+
+.announcement-tag {
+  height: 10vh;
+  min-width: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #f34413c9;
+  padding: 0 16px;
+  text-align: center;
+  color: white;
+}
+
+.announcement-tag ul {
+  display: block;
+  margin: auto 0;
+}
+
+.filter-section {
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+.filter-section div {
+  cursor: pointer;
+}
+
+.filter-section i {
+  display: inline-block;
+  position: absolute;
+  right: 20%;
+}
+
+.clothing-category-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.clothing-category-header div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+
+.clothing-category-header div ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin: auto;
+  width: 50%;
+  height: 100%;
+}
+
+.clothing-category-header div ul li {
+  margin: auto;
+  color: black;
+  padding: 0rem 0.2rem;
+  text-transform: capitalize;
+  list-style: none;
+}
+
+.clothing-category-header div ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+.clothing-category-header div ul li a:hover {
+  text-decoration: none;
+}
+
+.show-size {
+  min-width: auto;
+  width: 30px;
+  min-height: auto;
+  height: 30px;
+  padding: 1.2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 50%;
+  color: gray;
+  font-weight: 500;
+  border: 2px solid grey;
+  cursor: pointer;
+}
+
+.show-size.active {
+  color: #f34413c9;
+  border: 2px solid #f34413c9;
+}
+
+.item {
+  height: auto !important;
+}
+
+.item-img {
+  display: none;
+  height: 80vh;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.item-img.active {
+  display: block !important;
+}
+
+.item-name {
+  font-size: 24px;
+  text-transform: uppercase;
+}
+
+.item-description {
+  font-weight: 300;
+  color: grey;
+}
+
+.show-image {
+  height: auto;
+}
+
+.add-to-cart-btn {
+  padding: 0.4rem;
+  border: 2px solid #f34413c9;
+  background: none;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.add-to-cart-btn:hover {
+  color: white;
+  background-color: #f34413c9;
+}
+
+.isFavorite i {
+  color: red;
+}
+
+.item-link {
+  text-decoration: none;
+}
+
+.item-link:hover {
+  text-decoration: none;
+}
+
+.item-preview {
+  padding: 0 !important;
+  cursor: pointer;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
+  background: rgba(0, 0, 0, 0.1);
+  border: none;
+}
+
+.item-preview:hover {
+  text-decoration: none;
+  color: initial;
+}
+
+.item-preview .card {
+  margin: 0 !important;
+  height: 100%;
+  overflow: hidden;
+  padding: 0.8rem 0rem;
+  border: none;
+}
+
+.item-preview .card-header {
+  background: none !important;
+  width: 100%;
+  border-bottom: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.item-preview .card-body {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.item-preview .item-preview-image-container {
+  height: 30vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: white;
+  width: 100%;
+}
+
+.item-preview .individualImg {
+  height: 30vh !important;
+  position: absolute;
+  overflow: hidden;
+  opacity: 0;
+  -webkit-transition: opacity 400ms ease-in-out;
+  transition: opacity 400ms ease-in-out;
+  background-size: contain;
+  background-position: center center;
+  background-size: cover;
+}
+
+.item-preview .individualImg.visibleImg {
+  opacity: 1;
+}
+
+.item-preview h6 {
+  color: black;
+}
+
+.item-preview p {
+  color: black;
+  font-size: 0.8rem;
+}
+
+.price span {
+  font-weight: 700;
+}
+
+.sale {
+  color: #f34413c9;
+}
+
+.sale span {
+  font-weight: 700;
+}
+
+.show-item-col {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.show-item-col:hover {
+  border: 1px solid white;
+}
+
+.menu {
+  border-radius: 8px;
+  overflow: hidden;
+  list-style: none;
+}
+
+.item {
+  border-top: 1px solid white;
+  list-style: none;
+}
+
+.menu-button-border {
+  background: none !important;
+  color: #f34413c9 !important;
+  border: 2px solid #f34413c9 !important;
+  border-radius: 5px !important;
+  padding: 0.5em 1.2em !important;
+  width: 10em !important;
+}
+
+.menu-button-border i {
+  color: #f34413c9;
+}
+
+.menu-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 16px 20px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background: #f34413c9;
+  color: white;
+  width: 100%;
+}
+
+.menu-button:hover {
+  color: white;
+  text-decoration: none;
+}
+
+.menu-button:hover span {
+  color: #202124;
+}
+
+.menu-button:before {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  left: 20px;
+  bottom: -7px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.smenu {
+  background: #202124;
+  overflow: hidden;
+  -webkit-transition: max-height 300ms;
+  transition: max-height 300ms;
+  max-height: 0;
+}
+
+.smenu a {
+  display: block;
+  padding: 16px 26px;
+  color: white;
+  font-size: 14px;
+  margin: 4px 0;
+  position: relative;
+}
+
+.smenu a:before {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 100%;
+  background: #f34413c9;
+  left: 0;
+  top: 0;
+}
+
+.smenu a:hover {
+  text-decoration: none;
+}
+
+.smenu a:hover:before {
+  background: white;
+}
+
+.sort-menu {
+  background: #202124;
+  position: absolute;
+  width: 8em;
+  overflow: hidden;
+  max-height: 0;
+  z-index: 1000;
+  -webkit-transition: max-height 300ms;
+  transition: max-height 300ms;
+}
+
+.sort-menu div {
+  margin: 0 auto;
+  z-index: 2000;
+}
+
+.sort-menu div p {
+  z-index: 3000;
+}
+
+.color-container {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  padding: 16px 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto auto;
+      grid-template-columns: auto auto auto;
+  padding: 16px;
+}
+
+.color {
+  width: 4em;
+  height: 4em;
+  padding: 5px;
+  margin: 5px auto;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.color p {
+  margin: auto;
+}
+
+.color:before {
+  background: none;
+}
+
+.color:hover {
+  border: 1px solid white;
+}
+
+.color:hover:before {
+  background: none;
+}
+
+.selected-size {
+  border: 1px solid #f34413c9 !important;
+  color: #f34413c9 !important;
+}
+
+.selected-col {
+  border: 2px solid white;
+}
+
+.selected-price p {
+  color: #f34413c9;
+}
+
+.selected-col-dark {
+  border: 2px solid #f34413c9;
+}
+
+.expand {
+  max-height: 10em;
+}
+
+.expandExtra {
+  max-height: 15em;
+}
+
+.expandSuperExtra {
+  max-height: 25em;
+}
+
+.size-holder {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto auto;
+      grid-template-columns: auto auto auto;
+  -webkit-column-gap: 10px;
+          column-gap: 10px;
+  row-gap: 10px;
+  cursor: pointer;
+}
+
+.size-holder div {
+  margin: auto;
+  border: 1px solid gray;
+  cursor: pointer;
+}
+
+.size-holder div:hover {
+  color: #f34413c9;
+  border: 1px solid #f34413c9;
+}
+
+.price-holder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: distribute;
+      align-content: space-around;
+  padding: 5px 50px;
+  cursor: pointer;
+}
+
+.price-filter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5px;
+  color: grey;
+}
+
+.price-filter:hover p {
+  color: #f34413c9;
+}
+
+.price-filter input {
+  border: 2px solid #f34413c9;
+}
+
+.size-filter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5px;
+  color: grey;
+  border: 1px solid grey;
+}
+
+.sort-smaller-text {
+  width: inherit;
+}
+
+.sort-smaller-text .btn {
+  width: inherit;
+}
+
+.sort-smaller-text p {
+  font-size: 12px !important;
+}
+
+.active-sort {
+  color: #f34413c9 !important;
+}
+
+.pagination .page-item .page-link {
+  color: #f34413c9;
+}
+
+.active-page {
+  color: black !important;
+}
+
+.favorite-toggle-btn {
+  border: none;
+  background: none;
+  margin-left: 40px;
+  font-size: 20px;
+}
+
+.cart-container {
+  height: 16em !important;
+}
+
+.favorites-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.favorites-link div {
+  text-decoration: none;
+}
+
+.favorites-link div:hover {
+  text-decoration: none !important;
+}
+
+.favorites-link:hover {
+  text-decoration: none;
+}
+
+.favorites-image-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 10em;
+  height: 10em;
+  margin-right: 70px !important;
+  margin-left: 20px;
+}
+
+.favorites-image-container img {
+  margin: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.favorites-img {
+  width: 15em;
+  height: 10em;
+}
+
+.favorite-info {
+  font-size: inherit;
+  height: inherit;
+  text-decoration: none;
+  color: black;
+}
+
+.added-to-cart-popup {
+  position: absolute;
+  display: none;
+  padding: 16px 16px;
+  bottom: 0;
+  left: 40%;
+  width: 50%;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 20px;
+  color: #f34413c9;
+  text-align: center;
+}
+
+.cart-popup-visible {
+  display: block;
+}
+
+.cart-empty,
+.favorites-empty {
+  height: 100vh;
+}
+
+.favorites-not-empty {
+  min-height: 100vh;
+}
+
+.display-items-size-container {
+  width: auto !important;
+  height: auto !important;
+  margin-right: 5px !important;
+  font-size: 0.5em;
+  padding: 0 !important;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto;
+      grid-template-columns: auto auto;
+}
+
+.display-items-size-container div {
+  min-width: auto;
+  width: 10em;
+  min-height: auto;
+  height: 10em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 50%;
+  color: gray;
+  font-weight: 500;
+  border: 2px solid grey;
+  cursor: pointer;
+}
+
+.display-items-size-container div.active {
+  color: #f34413c9;
+  border: 2px solid #f34413c9;
+}
+
+.navbar-style {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.form-search {
+  border: 1px solid orangered;
+  border-radius: 5px;
+  padding: 0.2rem 0.2rem;
+  position: relative;
+}
+
+.form-search input {
+  border: none !important;
+  outline: none !important;
+}
+
+.form-search input:focus {
+  outline: none !important;
+  outline: 0;
+  outline-style: none;
+}
+
+.nav-link {
+  color: black;
+}
+
+.nav-link:hover {
+  color: #f34413c9;
+}
+
+.nav-link span {
+  color: black;
+}
+
+.nav-link span:hover {
+  color: black;
+}
+
+.navbar-brand {
+  color: black;
+}
+
+.navbar-brand:hover {
+  color: black;
+}
+
+.grid-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (auto)[4];
+      grid-template-columns: repeat(4, auto);
+  -webkit-column-gap: 1rem;
+          column-gap: 1rem;
+  height: auto;
+  max-height: auto;
+}
+
+.grid-container h6 {
+  font-weight: 700;
+}
+
+.grid-container h6,
+.grid-container a {
+  font-size: 0.8rem;
+}
+
+.grid-container .item-1 {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1 / 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / 2;
+}
+
+.grid-container .item-2 {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2 / 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / 2;
+}
+
+.grid-container .item-3 {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1 / 3;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2 / 3;
+}
+
+.grid-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.dropdown-item:hover {
+  background-color: #f34413c9;
+  color: white;
+}
+
+.men-dropdown {
+  display: none;
+}
+
+.women-dropdown {
+  display: none;
+}
+
+.visible {
+  display: -ms-grid;
+  display: grid;
+}
+
+.home {
+  height: auto;
+  max-height: auto;
+  width: 100%;
+  color: white;
+}
+
+.homepage-grid-container {
+  padding: 0 !important;
+  margin: 0 !important;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (auto)[1];
+      grid-template-columns: repeat(1, auto);
+  -webkit-column-gap: 0;
+          column-gap: 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.homepage-grid-container .item-1,
+.homepage-grid-container .item-2,
+.homepage-grid-container .item-3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: none;
+}
+
+.homepage-grid-container .item-1 {
+  width: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url("../Resources/Images/MaleModel.jpg") no-repeat;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../Resources/Images/MaleModel.jpg") no-repeat;
+  background-size: cover;
+  background-position: top;
+  background-attachment: fixed;
+}
+
+.homepage-grid-container .item-2 {
+  width: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url("../Resources/Images/FemaleModel.jpg") no-repeat;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../Resources/Images/FemaleModel.jpg") no-repeat;
+  background-size: cover;
+  background-position: top;
+}
+
+.homepage-grid-container .item-3 {
+  width: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url("../Resources/Images/clothes-on-sale.jpg") no-repeat;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../Resources/Images/clothes-on-sale.jpg") no-repeat;
+  background-size: cover;
+  background-position: top;
+  background-attachment: fixed;
+}
+
+.homepage-grid-container .homepage-img {
+  height: 90vh;
+  position: relative;
+}
+
+.homepage-grid-container .homepage-category-title {
+  position: absolute;
+  display: block;
+  font-size: 2em;
+  bottom: 200px;
+  text-shadow: 4px 4px 5px black;
+  text-transform: capitalize;
+}
+
+.homepage-grid-container .homepage-img-btn {
+  position: absolute;
+  bottom: 150px;
+  height: auto !important;
+  padding: 0.5rem 1.2rem;
+  color: white;
+  background: none;
+  border-radius: none !important;
+  border: 2px solid white;
+  outline: none !important;
+  text-transform: uppercase;
+  text-decoration: none;
+  -webkit-transition: all 450ms ease-in-out;
+  transition: all 450ms ease-in-out;
+}
+
+.homepage-grid-container .homepage-img-btn:hover {
+  color: black;
+  background: white;
+  border-radius: none !important;
+}
+
+.sidebar-title {
+  font-weight: 900;
+}
+
+.sidebar-link {
+  color: black;
+  font-size: 0.8rem;
+  display: block;
+  padding: 0.2rem 0.2rem;
+}
+
+.sidebar-link:hover {
+  text-decoration: none;
+  color: #f34413c9;
+}
+
+.category-title {
+  color: white;
+  text-align: center;
+  text-shadow: 3px 3px 5px black;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.category-grid-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto auto;
+      grid-template-columns: auto auto auto;
+}
+
+.category-grid-container .cat-img {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 70vh;
+  background-color: black;
+  background-size: cover;
+  margin: 0 !important;
+  border: 1px solid white;
+}
+
+.category-grid-container .men-item-1 {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-column: 1 / 4;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url("../Resources/Images/MenShoes/nikeMensRevolution5RunningShoeBlack.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../Resources/Images/MenShoes/nikeMensRevolution5RunningShoeBlack.jpg");
+  background-position: center;
+  background-position: contain !important;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+}
+
+.category-grid-container .men-item-2 {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / 2;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  grid-row: 2 / 4;
+  height: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url("../Resources/Images/MenJeans/SouthpoleMensActiveBasicJoggerBlack.jpg") no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../Resources/Images/MenJeans/SouthpoleMensActiveBasicJoggerBlack.jpg") no-repeat;
+  background-size: contain;
+  background-attachment: fixed;
+  border-left: none;
+  border-bottom: none;
+}
+
+.category-grid-container .men-item-3 {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-column: 2 / 4;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url("../Resources/Images/MenShoes/ASICSMensGelVenture6RunningShoeOrange.jpg") no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../Resources/Images/MenShoes/ASICSMensGelVenture6RunningShoeOrange.jpg") no-repeat;
+  background-position-x: right;
+  background-position-y: bottom;
+  border-right: none;
+}
+
+.category-grid-container .men-item-4 {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url("../Resources/Images/Male_TheWalkingDad/Male_The_Walking_Dad_Blue.jpg") no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../Resources/Images/Male_TheWalkingDad/Male_The_Walking_Dad_Blue.jpg") no-repeat;
+  background-size: contain;
+}
+
+.category-grid-container .men-item-5 {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url("../Resources/Images/MenShirts/newStylishSlimFormalPlaidShirtRed.jpg") no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../Resources/Images/MenShirts/newStylishSlimFormalPlaidShirtRed.jpg") no-repeat;
+  background-size: contain;
+}
+
+.category-grid-container .women-item-1 {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-column: 1 / 4;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url("../Resources/Images/WomenShoes/HerstyleKeettonOpenToeRed.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../Resources/Images/WomenShoes/HerstyleKeettonOpenToeRed.jpg");
+  background-position: center;
+  background-size: contain;
+  border-left: none !important;
+  border-right: none;
+  border-top: none;
+}
+
+.category-grid-container .women-item-2 {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / 2;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  grid-row: 2 / 4;
+  height: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url("../Resources/Images/WomenJeans/GLORIAVANDERBILTAmandaClassicTaperedJeansGreen.jpg") no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../Resources/Images/WomenJeans/GLORIAVANDERBILTAmandaClassicTaperedJeansGreen.jpg") no-repeat;
+  background-size: contain;
+  background-attachment: fixed;
+  border-left: none;
+  border-bottom: none;
+}
+
+.category-grid-container .women-item-3 {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-column: 2 / 4;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url("../Resources/Images/WomenShoes/VolcomNewSchoolDressSandalWhite.jpg") no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../Resources/Images/WomenShoes/VolcomNewSchoolDressSandalWhite.jpg") no-repeat;
+  background-position: center;
+  border-right: none;
+  background-size: cover !important;
+}
+
+.category-grid-container .women-item-4 {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url("../Resources/Images/WomenShirts/YidartonWomensComfyColdShoulderTwistGrey.jpg") no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../Resources/Images/WomenShirts/YidartonWomensComfyColdShoulderTwistGrey.jpg") no-repeat;
+  background-size: contain;
+}
+
+.category-grid-container .women-item-5 {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url("../Resources/Images/WomenShirts/HanesScoopNeckTankTopPink.jpg") no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../Resources/Images/WomenShirts/HanesScoopNeckTankTopPink.jpg") no-repeat;
+  background-size: contain;
+}
+
+.category-img-btn {
+  position: absolute;
+  bottom: 50px;
+  height: auto !important;
+  padding: 0.5rem 1.2rem;
+  color: white;
+  background: none;
+  border-radius: none !important;
+  border: 2px solid white;
+  outline: none !important;
+  text-transform: uppercase;
+  text-decoration: none;
+  -webkit-transition: all 350ms ease-in-out;
+  transition: all 350ms ease-in-out;
+}
+
+.category-img-btn:hover {
+  color: black;
+  background: white;
+  text-decoration: none;
+  border-radius: none !important;
+}
+
+.men-navigation .list-group {
+  width: 100%;
+}
+
+.men-navigation .list-group .list-group-item {
+  width: 100%;
+  cursor: pointer;
+}
+
+.men-navigation .list-group .list-group-item span {
+  display: inline-block;
+  position: absolute;
+  right: 1rem;
+}
+
+.page-footer {
+  background-color: #202124;
+  color: white;
+  padding-top: 50px;
+  font-size: 0.7em;
+  max-width: 100% !important;
+}
+
+.lead .footer-title {
+  font-size: 1.2em;
+  letter-spacing: 5px;
+}
+
+.online-socials {
+  font-weight: bold;
+  letter-spacing: 5px;
+  color: #f34413c9;
+}
+
+.social-links {
+  font-size: 24px;
+  padding: 0 20px;
+}
+
+@media (min-width: 0px) {
+  .item-1,
+  .item-2,
+  .item-3 {
+    background-size: cover;
+  }
+  .homepage-category-title {
+    font-size: 1em;
+  }
+  .display-items-size-container div {
+    padding: 0.6rem;
+  }
+  .category-grid-container {
+    display: block;
+  }
+  .category-grid-container .cat-img {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+    height: 70vh;
+    background-color: black;
+    background-size: cover;
+    margin: 0 !important;
+    border: 1px solid white;
+  }
+  .category-grid-container .item-1,
+  .category-grid-container .item-2,
+  .category-grid-container .item-3,
+  .category-grid-container .item-4,
+  .category-grid-container .item-5 {
+    border-right: none;
+    border-left: none;
+  }
+  .category-grid-container .men-item-2 {
+    height: 70vh;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url("../Resources/Images/MenJeans/SouthpoleMensActiveBasicJoggerBlack.jpg") no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../Resources/Images/MenJeans/SouthpoleMensActiveBasicJoggerBlack.jpg") no-repeat;
+    background-size: cover;
+    background-position-y: 0%;
+    border-right: none;
+    border-bottom: none;
+  }
+  .category-grid-container .women-item-2 {
+    height: 70vh;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url("../Resources/Images/WomenJeans/GLORIAVANDERBILTAmandaClassicTaperedJeansGreen.jpg") no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../Resources/Images/WomenJeans/GLORIAVANDERBILTAmandaClassicTaperedJeansGreen.jpg") no-repeat;
+    background-size: cover;
+    background-position-y: 0%;
+    border-right: none;
+    border-bottom: none;
+  }
+  .clothing-category-header {
+    padding: 0 16px;
+    font-size: 0.6em;
+  }
+  .clothing-category-header div ul {
+    width: 100%;
+    padding: 0 1rem;
+  }
+  .clothing-category-header div ul li {
+    font-size: 1em;
+    padding: 0;
+    margin: 0 1px;
+  }
+  .announcement-tag span {
+    position: absolute;
+    left: -10px;
+    margin-left: 20px;
+    font-size: 0.6rem;
+  }
+  .announcement-tag ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 0;
+  }
+  .announcement-tag ul li {
+    padding: 0;
+    font-size: 0.5em;
+    position: relative;
+    display: inline;
+  }
+  .category-title {
+    font-size: 1.2em;
+  }
+  .category-title .favorites-link {
+    height: 20em;
+  }
+  .favorite-info {
+    font-size: 0.5em;
+    height: inherit;
+    text-decoration: none;
+    color: black;
+  }
+  .favorite-info div {
+    margin-right: 0px !important;
+    font-size: 0.5em;
+  }
+  .favorite-info div .show-size {
+    width: 0.4em;
+    height: 0.4em;
+  }
+}
+
+@media (min-width: 300px) {
+  .category-title {
+    font-size: 2em;
+  }
+}
+
+@media (min-width: 500px) {
+  .homepage-category-title {
+    font-size: 2em;
+  }
+  .announcement-tag span {
+    left: 0;
+    margin-left: 20px;
+    font-size: 14px;
+  }
+  .announcement-tag ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .announcement-tag ul li {
+    font-size: 1em;
+    margin: auto;
+    color: black;
+    padding: 0rem 0.2rem;
+    text-transform: capitalize;
+    list-style: none;
+  }
+  .clothing-category-header {
+    font-size: 1em;
+  }
+  .favorite-info {
+    font-size: 0.8em;
+    height: inherit;
+    text-decoration: none;
+    color: black;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+  .navigation-links {
+    position: absolute;
+    right: 0px;
+    height: 92vh;
+    top: 8vh;
+    background: #202124;
+    z-index: 10000;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 50%;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    -webkit-transition: display 0ms;
+    transition: display 0ms;
+    -webkit-transition: -webkit-transform 400ms ease-in;
+    transition: -webkit-transform 400ms ease-in;
+    transition: transform 400ms ease-in;
+    transition: transform 400ms ease-in, -webkit-transform 400ms ease-in;
+  }
+  .navigation-links li {
+    opacity: 0;
+  }
+  .navigation-links li a {
+    color: white;
+  }
+  .burger {
+    display: block;
+  }
+}
+
+@media (min-width: 768px) {
+  .homepage-category-title {
+    font-size: 2em;
+  }
+  .item-1,
+  .item-2,
+  .item-3 {
+    background-size: cover;
+  }
+  .display-items-size-container div {
+    font-size: 0.4rem;
+    padding: 1.2rem;
+  }
+  .category-title {
+    font-size: 2em;
+  }
+  .announcement-tag span {
+    color: white;
+    position: relative;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    font-size: 16px;
+  }
+  .clothing-category-header div ul {
+    width: 50%;
+    padding: 0;
+  }
+  .clothing-category-header div ul li {
+    margin: 0 auto;
+    padding: 0rem 0.2rem;
+    font-size: 16px;
+  }
+  .favorite-info {
+    font-size: 1em;
+    height: inherit;
+    text-decoration: none;
+    color: black;
+  }
+  .favorite-info div {
+    width: 1em;
+    height: 1em;
+    margin-right: 20px !important;
+    font-size: 1em;
+  }
+}
+
+@media (min-width: 992px) {
+  .item-1,
+  .item-2,
+  .item-3 {
+    background-size: cover;
+  }
+  .category-grid-container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto auto auto;
+        grid-template-columns: auto auto auto;
+  }
+  .category-grid-container .cat-img {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+    height: 70vh;
+    background-color: black;
+    background-size: cover;
+    margin: 0 !important;
+    border: 1px solid white;
+  }
+  .category-grid-container .men-item-1 {
+    border-left: none;
+    border-right: none;
+  }
+  .category-grid-container .men-item-2 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1 / 2;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 2;
+    grid-row: 2 / 4;
+    height: 100% !important;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url("../Resources/Images/MenJeans/SouthpoleMensActiveBasicJoggerBlack.jpg") no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../Resources/Images/MenJeans/SouthpoleMensActiveBasicJoggerBlack.jpg") no-repeat;
+    background-size: contain;
+    background-attachment: fixed;
+    border-left: none;
+    border-bottom: none;
+  }
+  .category-grid-container .women-item-2 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1 / 2;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 2;
+    grid-row: 2 / 4;
+    height: 100% !important;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url("../Resources/Images/WomenJeans/GLORIAVANDERBILTAmandaClassicTaperedJeansGreen.jpg") no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../Resources/Images/WomenJeans/GLORIAVANDERBILTAmandaClassicTaperedJeansGreen.jpg") no-repeat;
+    background-size: contain;
+    background-attachment: fixed;
+    border-left: none;
+    border-bottom: 1px solid white;
+  }
+  .favorite-info {
+    font-size: inherit;
+    height: inherit;
+    text-decoration: none;
+    color: black;
+  }
+}
+
+@-webkit-keyframes navigationLinkFade {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(50px);
+            transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+@keyframes navigationLinkFade {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(50px);
+            transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+/*# sourceMappingURL=style.css.map */
