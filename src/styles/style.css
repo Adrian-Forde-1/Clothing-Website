@@ -3,11 +3,11 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  overflow-x: none !important;
 }
 
 body {
   font-family: 'Poppins', sans-serif;
+  overflow-x: hidden !important;
 }
 
 .container,
@@ -63,6 +63,9 @@ body {
 .navigation-active {
   -webkit-transform: translateX(0%) !important;
           transform: translateX(0%) !important;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
 }
 
 .burger {
@@ -1431,7 +1434,7 @@ body {
 
 @media (max-width: 768px) {
   body {
-    overflow-x: hidden;
+    overflow-x: hidden !important;
   }
   .navigation-links {
     position: absolute;
@@ -1440,9 +1443,7 @@ body {
     top: 8vh;
     background: #202124;
     z-index: 10000;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    display: none;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -1451,14 +1452,6 @@ body {
         -ms-flex-align: center;
             align-items: center;
     width: 50%;
-    -webkit-transform: translateX(100%);
-            transform: translateX(100%);
-    -webkit-transition: display 0ms;
-    transition: display 0ms;
-    -webkit-transition: -webkit-transform 400ms ease-in;
-    transition: -webkit-transform 400ms ease-in;
-    transition: transform 400ms ease-in;
-    transition: transform 400ms ease-in, -webkit-transform 400ms ease-in;
   }
   .navigation-links li {
     opacity: 0;
@@ -1589,26 +1582,18 @@ body {
 @-webkit-keyframes navigationLinkFade {
   from {
     opacity: 0;
-    -webkit-transform: translateX(50px);
-            transform: translateX(50px);
   }
   to {
     opacity: 1;
-    -webkit-transform: translateX(0px);
-            transform: translateX(0px);
   }
 }
 
 @keyframes navigationLinkFade {
   from {
     opacity: 0;
-    -webkit-transform: translateX(50px);
-            transform: translateX(50px);
   }
   to {
     opacity: 1;
-    -webkit-transform: translateX(0px);
-            transform: translateX(0px);
   }
 }
 /*# sourceMappingURL=style.css.map */
