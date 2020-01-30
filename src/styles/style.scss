@@ -655,6 +655,7 @@ body {
 }
 
 .favorites-image-container {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -666,14 +667,18 @@ body {
     margin: auto;
     object-fit: contain;
   }
+  flex-grow: 1;
 }
 
 .favorites-img {
   width: 15em;
   height: 10em;
+  margin: auto;
+  object-fit: contain;
 }
 
 .favorite-info {
+  position: relative;
   font-size: inherit;
   height: inherit;
   text-decoration: none;

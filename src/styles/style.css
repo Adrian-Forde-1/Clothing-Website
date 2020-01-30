@@ -737,6 +737,7 @@ body {
 }
 
 .favorites-image-container {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -750,6 +751,9 @@ body {
   height: 10em;
   margin-right: 70px !important;
   margin-left: 20px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 
 .favorites-image-container img {
@@ -761,9 +765,13 @@ body {
 .favorites-img {
   width: 15em;
   height: 10em;
+  margin: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .favorite-info {
+  position: relative;
   font-size: inherit;
   height: inherit;
   text-decoration: none;
