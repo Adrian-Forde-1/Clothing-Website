@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/Clothing-Website/static/css/main.a377cfd1.chunk.css",
-    "main.js": "/Clothing-Website/static/js/main.e8c392f9.chunk.js",
-    "main.js.map": "/Clothing-Website/static/js/main.e8c392f9.chunk.js.map",
+    "main.js": "/Clothing-Website/static/js/main.55be342a.chunk.js",
+    "main.js.map": "/Clothing-Website/static/js/main.55be342a.chunk.js.map",
     "runtime-main.js": "/Clothing-Website/static/js/runtime-main.6bd125fe.js",
     "runtime-main.js.map": "/Clothing-Website/static/js/runtime-main.6bd125fe.js.map",
     "static/js/2.e0df0656.chunk.js": "/Clothing-Website/static/js/2.e0df0656.chunk.js",
     "static/js/2.e0df0656.chunk.js.map": "/Clothing-Website/static/js/2.e0df0656.chunk.js.map",
     "index.html": "/Clothing-Website/index.html",
-    "precache-manifest.4935113376fd93d4b18929c3bcfdfe28.js": "/Clothing-Website/precache-manifest.4935113376fd93d4b18929c3bcfdfe28.js",
+    "precache-manifest.835b07c9575c77a5b1d70c10716efb7b.js": "/Clothing-Website/precache-manifest.835b07c9575c77a5b1d70c10716efb7b.js",
     "service-worker.js": "/Clothing-Website/service-worker.js",
     "static/css/main.a377cfd1.chunk.css.map": "/Clothing-Website/static/css/main.a377cfd1.chunk.css.map",
     "static/js/2.e0df0656.chunk.js.LICENSE": "/Clothing-Website/static/js/2.e0df0656.chunk.js.LICENSE",
@@ -150,6 +150,6 @@
     "static/js/runtime-main.6bd125fe.js",
     "static/js/2.e0df0656.chunk.js",
     "static/css/main.a377cfd1.chunk.css",
-    "static/js/main.e8c392f9.chunk.js"
+    "static/js/main.55be342a.chunk.js"
   ]
 }
