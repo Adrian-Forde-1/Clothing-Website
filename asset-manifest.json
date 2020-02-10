@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/Clothing-Website/static/css/main.a377cfd1.chunk.css",
-    "main.js": "/Clothing-Website/static/js/main.55be342a.chunk.js",
-    "main.js.map": "/Clothing-Website/static/js/main.55be342a.chunk.js.map",
+    "main.js": "/Clothing-Website/static/js/main.d44bbb8a.chunk.js",
+    "main.js.map": "/Clothing-Website/static/js/main.d44bbb8a.chunk.js.map",
     "runtime-main.js": "/Clothing-Website/static/js/runtime-main.6bd125fe.js",
     "runtime-main.js.map": "/Clothing-Website/static/js/runtime-main.6bd125fe.js.map",
-    "static/js/2.e0df0656.chunk.js": "/Clothing-Website/static/js/2.e0df0656.chunk.js",
-    "static/js/2.e0df0656.chunk.js.map": "/Clothing-Website/static/js/2.e0df0656.chunk.js.map",
+    "static/js/2.3d50e59c.chunk.js": "/Clothing-Website/static/js/2.3d50e59c.chunk.js",
+    "static/js/2.3d50e59c.chunk.js.map": "/Clothing-Website/static/js/2.3d50e59c.chunk.js.map",
     "index.html": "/Clothing-Website/index.html",
-    "precache-manifest.b68eb9a7ae854224e861567833d0f7f0.js": "/Clothing-Website/precache-manifest.b68eb9a7ae854224e861567833d0f7f0.js",
+    "precache-manifest.3eb71d47c0c644a7e0efe8813e825a54.js": "/Clothing-Website/precache-manifest.3eb71d47c0c644a7e0efe8813e825a54.js",
     "service-worker.js": "/Clothing-Website/service-worker.js",
     "static/css/main.a377cfd1.chunk.css.map": "/Clothing-Website/static/css/main.a377cfd1.chunk.css.map",
-    "static/js/2.e0df0656.chunk.js.LICENSE": "/Clothing-Website/static/js/2.e0df0656.chunk.js.LICENSE",
+    "static/js/2.3d50e59c.chunk.js.LICENSE": "/Clothing-Website/static/js/2.3d50e59c.chunk.js.LICENSE",
     "static/media/ASICSMensGelVenture6RunningShoeBlue.jpg": "/Clothing-Website/static/media/ASICSMensGelVenture6RunningShoeBlue.60906de3.jpg",
     "static/media/ASICSMensGelVenture6RunningShoeGrey.jpg": "/Clothing-Website/static/media/ASICSMensGelVenture6RunningShoeGrey.0417b125.jpg",
     "static/media/style.css": "/Clothing-Website/static/media/nikeMensRevolution5RunningShoeBlack.cc02f460.jpg",
@@ -148,8 +148,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.6bd125fe.js",
-    "static/js/2.e0df0656.chunk.js",
+    "static/js/2.3d50e59c.chunk.js",
     "static/css/main.a377cfd1.chunk.css",
-    "static/js/main.55be342a.chunk.js"
+    "static/js/main.d44bbb8a.chunk.js"
   ]
 }
