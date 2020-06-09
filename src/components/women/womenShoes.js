@@ -1,10 +1,10 @@
-import React, { Component } from "react";
-import { WomenShoesContext } from "../../contexts/WomenShoesContext";
-import WomenFilterShoes from "./WomenFilterShoes";
-import ItemPreview from "../ItemPreview";
-import AnnouncementTag from "../AnnouncementTag";
-import { Pagination } from "../Pagination";
-import WomenSortBy from "./WomenSortBy";
+import React, { Component } from 'react';
+import { WomenShoesContext } from '../../contexts/WomenShoesContext';
+import WomenFilterShoes from './WomenFilterShoes';
+import ItemPreview from '../ItemPreview';
+import AnnouncementTag from '../AnnouncementTag';
+import { Pagination } from '../Pagination';
+import WomenSortBy from './WomenSortBy';
 
 export class WomenShoes extends Component {
   //Getting the contenxt and assigning it
@@ -26,7 +26,7 @@ export class WomenShoes extends Component {
     this.state = {
       filteredClothes: [],
       clothes: [],
-      currentClothes: []
+      currentClothes: [],
     };
   }
 
@@ -40,13 +40,13 @@ export class WomenShoes extends Component {
     this.setState(
       {
         //Assigning clothes to shoes
-        clothes: [...shoes]
+        clothes: [...shoes],
       },
       () => {
         this.setState(
           {
             //Assigning filteredClothes to shoes
-            filteredClothes: [...shoes]
+            filteredClothes: [...shoes],
           },
           //Using the second setState to assign currentClothes to a portion of filteredClothes
           () => {
@@ -54,7 +54,7 @@ export class WomenShoes extends Component {
               currentClothes: this.state.filteredClothes.slice(
                 this.indexOfFirstShoe,
                 this.indexOfLastShoe
-              )
+              ),
             });
           }
         );
@@ -64,7 +64,7 @@ export class WomenShoes extends Component {
 
   render() {
     //Sets a function that will be passed as a props to get its value from a child component
-    const paginate = pageNumber => {
+    const paginate = (pageNumber) => {
       //Sets the current page to the value passed by the child
       this.currentPage = pageNumber;
       //Change these values since the value they use has also change
@@ -75,14 +75,14 @@ export class WomenShoes extends Component {
         currentClothes: this.state.filteredClothes.slice(
           this.indexOfFirstShoe,
           this.indexOfLastShoe
-        )
+        ),
       });
       //When a page is clicked, scroll to the top
       window.scrollTo(0, 0);
     };
 
     //A function that helps with sorting objects
-    function compareValues(key, order = "asc") {
+    function compareValues(key, order = 'asc') {
       //key = the key in the object that you want to sort by
       return function innerSort(a, b) {
         //a = first object
@@ -95,8 +95,8 @@ export class WomenShoes extends Component {
         }
 
         //If the value of the key is a string, convert it to uppercase to make comparsion easier
-        let varA = typeof a[key] === "string" ? a[key].toUpperCase() : a[key];
-        let varB = typeof b[key] === "string" ? b[key].toUpperCase() : b[key];
+        let varA = typeof a[key] === 'string' ? a[key].toUpperCase() : a[key];
+        let varB = typeof b[key] === 'string' ? b[key].toUpperCase() : b[key];
 
         //Convert the variable to a float to allow decimal points
         varA = parseFloat(varA);
@@ -112,27 +112,27 @@ export class WomenShoes extends Component {
         }
         //If the second parameter was used and changed to desc, the comparsion variable will be inverted
         //Causing the array to sort in descending order
-        return order === "desc" ? comparison * -1 : comparison;
+        return order === 'desc' ? comparison * -1 : comparison;
       };
     }
 
     //A function that handle all the sorting done on the page
     const sortClothes = () => {
       //Gets the current sort selected from sessionStorage
-      let currentSort = sessionStorage.getItem("currentSort");
+      let currentSort = sessionStorage.getItem('currentSort');
       //Converting the JSON.stringify data from sessionStorage back using JSON.parse(the variable you want to convert back)
       currentSort = JSON.parse(currentSort);
 
       //Checks to see if the current Sort selected is equal to "Featured"
-      if (currentSort === "Featured") {
+      if (currentSort === 'Featured') {
         this.currentPage = 1;
         this.indexOfLastShirt = this.currentPage * this.postPerPage;
         this.indexOfFirstShirt = this.indexOfLastShirt - this.postPerPage;
         //Using setState to sort filteredClothes according to the sort currently selected
         this.setState((prevState, props) => ({
           filteredClothes: prevState.filteredClothes.sort(
-            compareValues("featured")
-          )
+            compareValues('featured')
+          ),
         }));
 
         //Using setState to change currentClothes to be a secion of the newly sorted filteredClothes
@@ -140,20 +140,20 @@ export class WomenShoes extends Component {
           currentClothes: prevState.filteredClothes.slice(
             this.indexOfFirstShirt,
             this.indexOfLastShirt
-          )
+          ),
         }));
       }
 
       //Checks to see if the current Sort selected is equal to "High to Low"
-      if (currentSort === "High to Low") {
+      if (currentSort === 'High to Low') {
         this.currentPage = 1;
         this.indexOfLastShirt = this.currentPage * this.postPerPage;
         this.indexOfFirstShirt = this.indexOfLastShirt - this.postPerPage;
         //Using setState to sort filteredClothes according to the sort currently selected
         this.setState((prevState, props) => ({
           filteredClothes: prevState.filteredClothes.sort(
-            compareValues("price", "desc")
-          )
+            compareValues('price', 'desc')
+          ),
         }));
 
         //Using setState to change currentClothes to be a secion of the newly sorted filteredClothes
@@ -161,20 +161,20 @@ export class WomenShoes extends Component {
           currentClothes: prevState.filteredClothes.slice(
             this.indexOfFirstShirt,
             this.indexOfLastShirt
-          )
+          ),
         }));
       }
 
       //Checks to see if the current Sort selected is equal to "Low to High"
-      if (currentSort === "Low to High") {
+      if (currentSort === 'Low to High') {
         this.currentPage = 1;
         this.indexOfLastShirt = this.currentPage * this.postPerPage;
         this.indexOfFirstShirt = this.indexOfLastShirt - this.postPerPage;
         //Using setState to sort filteredClothes according to the sort currently selected
         this.setState((prevState, props) => ({
           filteredClothes: prevState.filteredClothes.sort(
-            compareValues("price")
-          )
+            compareValues('price')
+          ),
         }));
 
         //Using setState to change currentClothes to be a secion of the newly sorted filteredClothes
@@ -182,7 +182,7 @@ export class WomenShoes extends Component {
           currentClothes: prevState.filteredClothes.slice(
             this.indexOfFirstShirt,
             this.indexOfLastShirt
-          )
+          ),
         }));
       }
     };
@@ -191,34 +191,34 @@ export class WomenShoes extends Component {
     const filterClothes = () => {
       if (this.componentLoaded === true) {
         //Initialising all the variables from values stored in sessionStorage
-        let sizes = sessionStorage.getItem("sizeFilter");
+        let sizes = sessionStorage.getItem('sizeFilter');
         //Converting the JSON.stringify data from sessionStorage back using JSON.parse(the variable you want to convert back)
         sizes = JSON.parse(sizes);
 
-        let colors = sessionStorage.getItem("colorFilter");
+        let colors = sessionStorage.getItem('colorFilter');
         //Converting the JSON.stringify data from sessionStorage back using JSON.parse(the variable you want to convert back)
         colors = JSON.parse(colors);
 
-        let highPrice = sessionStorage.getItem("highPriceFilter");
+        let highPrice = sessionStorage.getItem('highPriceFilter');
         //Converting the JSON.stringify data from sessionStorage back using JSON.parse(the variable you want to convert back)
         highPrice = JSON.parse(highPrice);
         //Converting the variable to a float
         highPrice = parseFloat(highPrice);
 
-        let lowPrice = sessionStorage.getItem("lowPriceFilter");
+        let lowPrice = sessionStorage.getItem('lowPriceFilter');
         //Converting the JSON.stringify data from sessionStorage back using JSON.parse(the variable you want to convert back)
         lowPrice = JSON.parse(lowPrice);
         //Converting the variable to a float
         lowPrice = parseFloat(lowPrice);
 
-        let price = sessionStorage.getItem("price");
+        let price = sessionStorage.getItem('price');
         //Converting the JSON.stringify data from sessionStorage back using JSON.parse(the variable you want to convert back)
         price = JSON.parse(price);
         //Converting the variable to a float
         price = parseFloat(price);
 
         this.setState({
-          filteredClothes: this.state.clothes
+          filteredClothes: this.state.clothes,
         });
 
         if (sizes === null) sizes = [];
@@ -230,11 +230,11 @@ export class WomenShoes extends Component {
           this.setState(
             (prevState, props) => ({
               //Assigns filteredClothes to the filtered version of FilteredClothes
-              filteredClothes: prevState.filteredClothes.filter(shoe => {
+              filteredClothes: prevState.filteredClothes.filter((shoe) => {
                 //Creates a variable called hasSize ans sets it to 0
                 let hasSize = 0;
                 //Loops through all the sizes in each shoe
-                shoe.sizes.map(size => {
+                shoe.sizes.map((size) => {
                   //Check to see if the size is included in the varible sizes - If it it add one to hasSize
                   sizes.indexOf(size) > -1 ? hasSize++ : (hasSize = hasSize);
                 });
@@ -243,7 +243,7 @@ export class WomenShoes extends Component {
                 if (hasSize >= 1) {
                   return true;
                 } else return false;
-              })
+              }),
             }),
             //After the setState is completed run this function
             () => {
@@ -252,8 +252,8 @@ export class WomenShoes extends Component {
               this.setState(
                 {
                   filteredClothes: this.state.filteredClothes.filter(
-                    shoe => shoe !== undefined
-                  )
+                    (shoe) => shoe !== undefined
+                  ),
                 },
                 //When the setState is completed, call the sortClothes functions which will sort
                 //the array according to the currently selected sort
@@ -269,12 +269,12 @@ export class WomenShoes extends Component {
           this.setState(
             (prevState, props) => ({
               //Assigns filteredClothes to the filtered version of FilteredClothes
-              filteredClothes: prevState.filteredClothes.filter(shoe => {
+              filteredClothes: prevState.filteredClothes.filter((shoe) => {
                 //Creates a variable called hasSize ans sets it to 0
                 let hasColor = 0;
                 //Loops through all the images in each shoe because each image has a images source
                 //and color assigned to it
-                shoe.images.map(image => {
+                shoe.images.map((image) => {
                   //Check to see if the color is included in the varible colors - If it it add one to hasSize
                   colors.indexOf(image.color) > -1
                     ? hasColor++
@@ -284,7 +284,7 @@ export class WomenShoes extends Component {
                 //one of the currently selected colors
                 if (hasColor >= 1) return true;
                 else return false;
-              })
+              }),
             }),
             //After the setState is completed run this function
             () => {
@@ -293,8 +293,8 @@ export class WomenShoes extends Component {
               this.setState(
                 {
                   filteredClothes: this.state.filteredClothes.filter(
-                    shoe => shoe !== undefined
-                  )
+                    (shoe) => shoe !== undefined
+                  ),
                 },
                 //When the setState is completed, call the sortClothes functions which will sort
                 //the array according to the currently selected sort
@@ -308,19 +308,14 @@ export class WomenShoes extends Component {
         if (!isNaN(price)) {
           //Runs a setState function to filter filteredClothers
           this.setState(
-            (prevState, props) => ({
-              //Assigns filteredClothes to the filtered version of FilteredClothes
-              filteredClothes: prevState.filteredClothes.filter(shoe => {
-                //It checks to see if the current shoe has a sale price or not
-                //If it does, the sale price is converted to a float and compared to the price selected
-                if (shoe.sale !== null) return parseFloat(shoe.sale) >= price;
-                //If it does not has a sale price, the regular price is compared to the price selected
-                else return parseFloat(shoe.price) >= price;
-              })
+            (prevState) => ({
+              filteredClothes: prevState.filteredClothes.filter((shoe) =>
+                shoe.sale ? shoe.sale >= price : shoe.price >= price
+              ),
             }),
-            //When the setState is completed, call the sortClothes functions which will sort
-            //the array according to the currently selected sort
-            sortClothes()
+            () => {
+              sortClothes();
+            }
           );
         }
 
@@ -328,42 +323,29 @@ export class WomenShoes extends Component {
         if (!isNaN(lowPrice)) {
           //Runs a setState function to filter filteredClothers
           this.setState(
-            (prevState, props) => ({
-              //Assigns filteredClothes to the filtered version of FilteredClothes
-              filteredClothes: prevState.filteredClothes.filter(shoe => {
-                //It checks to see if the current shoe has a sale price or not
-                //If it does, the sale price is converted to a float and compared to the lowPrice entered
-                if (shoe.sale !== null)
-                  return parseFloat(shoe.sale) >= parseFloat(lowPrice);
-                //If it does not has a sale price, the regular price is compared to the lowPrice entered
-                else return parseFloat(shoe.price) >= parseFloat(lowPrice);
-              })
+            (prevState) => ({
+              filteredClothes: prevState.filteredClothes.filter((shoe) =>
+                shoe.sale ? shoe.sale >= lowPrice : shoe.price >= lowPrice
+              ),
             }),
-            //When the setState is completed, call the sortClothes functions which will sort
-            //the array according to the currently selected sort
-            sortClothes()
+            () => {
+              sortClothes();
+            }
           );
         }
 
         //Checks to see if the user is filtering by highPrice
         if (!isNaN(highPrice)) {
-          console.log("high price entered");
           //Runs a setState function to filter filteredClothers
           this.setState(
-            (prevState, props) => ({
-              //Assigns filteredClothes to the filtered version of FilteredClothes
-              filteredClothes: prevState.filteredClothes.filter(shoe => {
-                //It checks to see if the current shoe has a sale price or not
-                //If it does, the sale price is converted to a float and compared to the highPrice entered
-                if (shoe.sale !== null)
-                  return parseFloat(shoe.sale) <= parseFloat(highPrice);
-                //If it does not has a sale price, the regular price is compared to the lowPrice entered
-                else return parseFloat(shoe.price) <= parseFloat(highPrice);
-              })
+            (prevState) => ({
+              filteredClothes: prevState.filteredClothes.filter((shoe) =>
+                shoe.sale ? shoe.sale <= highPrice : shoe.price <= highPrice
+              ),
             }),
-            //When the setState is completed, call the sortClothes functions which will sort
-            //the array according to the currently selected sort
-            sortClothes()
+            () => {
+              sortClothes();
+            }
           );
         }
 
@@ -381,7 +363,7 @@ export class WomenShoes extends Component {
             //Runs setState to set filteredClothes to the initial value stored in prevState.clothes aka this.state.clothes
             (prevState, value) => ({
               //Setting filteredClothes to prevState.clothes
-              filteredClothes: prevState.clothes
+              filteredClothes: prevState.clothes,
             }),
             //When the setState is completed, call the sortClothes functions which will sort
             //the array according to the currently selected sort
@@ -419,7 +401,7 @@ export class WomenShoes extends Component {
             {this.state.currentClothes.length ? (
               <div className="col-md-12 col-lg-9 mt-3 mt-lg-0">
                 <div className="row">
-                  {this.state.currentClothes.map(shoe => {
+                  {this.state.currentClothes.map((shoe) => {
                     return <ItemPreview item={shoe} key={shoe.id} />;
                   })}
                 </div>
