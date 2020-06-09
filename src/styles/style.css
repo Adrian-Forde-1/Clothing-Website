@@ -47,6 +47,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   width: 40%;
+  margin-bottom: 0px !important;
 }
 
 .navigation-links li {
@@ -58,6 +59,10 @@ body {
   text-decoration: none;
   letter-spacing: 3px;
   font-size: 14px;
+}
+
+.navigation-links a:hover {
+  color: #f34413c9;
 }
 
 .navigation-active {
@@ -449,6 +454,7 @@ body {
   background: #f34413c9;
   color: white;
   width: 100%;
+  border: none;
 }
 
 .menu-button:hover {
@@ -613,6 +619,7 @@ body {
           column-gap: 10px;
   row-gap: 10px;
   cursor: pointer;
+  padding: 10px 10px;
 }
 
 .size-holder div {
@@ -639,11 +646,12 @@ body {
           justify-content: center;
   -ms-flex-line-pack: distribute;
       align-content: space-around;
-  padding: 5px 50px;
+  padding: 5px;
   cursor: pointer;
 }
 
 .price-filter {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -661,7 +669,24 @@ body {
   color: #f34413c9;
 }
 
-.price-filter input {
+.price-input-filter {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.price-input-filter span {
+  -ms-flex-negative: 2;
+      flex-shrink: 2;
+  color: white;
+}
+
+.price-input-filter input {
+  width: 60%;
   border: 2px solid #f34413c9;
 }
 

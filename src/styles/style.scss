@@ -48,6 +48,7 @@ body {
   justify-content: space-around;
   align-items: center;
   width: 40%;
+  margin-bottom: 0px !important;
   li {
     list-style: none;
   }
@@ -56,6 +57,10 @@ body {
     text-decoration: none;
     letter-spacing: 3px;
     font-size: 14px;
+
+    &:hover {
+      color: $orioles-orange;
+    }
   }
 }
 
@@ -391,6 +396,7 @@ body {
   background: $orioles-orange;
   color: white;
   width: 100%;
+  border: none;
 
   &:hover {
     color: white;
@@ -538,6 +544,7 @@ body {
   column-gap: 10px;
   row-gap: 10px;
   cursor: pointer;
+  padding: 10px 10px;
 
   div {
     margin: auto;
@@ -556,11 +563,12 @@ body {
   flex-direction: column;
   justify-content: center;
   align-content: space-around;
-  padding: 5px 50px;
+  padding: 5px;
   cursor: pointer;
 }
 
 .price-filter {
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -572,8 +580,19 @@ body {
       color: $orioles-orange;
     }
   }
+}
 
+.price-input-filter {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  span {
+    flex-shrink: 2;
+    color: white;
+  }
   input {
+    width: 60%;
     border: 2px solid $orioles-orange;
   }
 }
