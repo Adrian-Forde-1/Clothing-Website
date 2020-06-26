@@ -8,6 +8,7 @@
 body {
   font-family: 'Poppins', sans-serif;
   overflow-x: hidden !important;
+  width: 100%;
 }
 
 .container,
@@ -257,6 +258,21 @@ body {
 
 .item-img.active {
   display: block !important;
+}
+
+.item-size-container {
+  width: 100%;
+  display: -ms-grid !important;
+  display: grid !important;
+  row-gap: 10px;
+  -ms-grid-columns: (50px)[auto-fit];
+      grid-template-columns: repeat(auto-fit, 50px);
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .item-name {

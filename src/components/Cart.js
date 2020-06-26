@@ -180,11 +180,6 @@ const Cart = () => {
           USD
         </div>
       </div>
-      <div className="container-fluid w-100 d-flex flex-column align-items-center mb-5">
-        <button className="btn btn-dark btn-lg text-center mt-5 pr-5 mx-auto">
-          <span>Proceed To Checkout</span>
-        </button>
-      </div>
     </div>
   ) : (
     <div className="container-fluid">

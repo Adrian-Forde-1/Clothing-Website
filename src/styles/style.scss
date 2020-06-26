@@ -17,6 +17,7 @@ $pale-gold: #f0c987;
 body {
   font-family: 'Poppins', sans-serif;
   overflow-x: hidden !important;
+  width: 100%;
 }
 
 .container,
@@ -226,6 +227,15 @@ body {
   &.active {
     display: block !important;
   }
+}
+
+.item-size-container {
+  width: 100%;
+  display: grid !important;
+  row-gap: 10px;
+  grid-template-columns: repeat(auto-fit, 50px);
+  justify-content: space-between;
+  align-items: center;
 }
 
 .item-name {
